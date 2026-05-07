@@ -114,7 +114,6 @@ function updatePresence() {
   rpcClient.setActivity({
     details: currentTrack.title,
     state: `${currentTrack.artist} — ${currentTrack.album}`,
-    type: currentTrack.state === 'playing' ? 2 : 0,
     largeImageKey: resolveDiscordArtworkKey(currentTrack),
     largeImageText: currentTrack.title,
     smallImageKey: currentTrack.state === 'playing' ? 'play' : 'pause',
