@@ -33,3 +33,9 @@ jobs:
             echo "Build output missing: dist/main.js";
             exit 1;
           fi
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: musicrpc-dist
+          path: dist
