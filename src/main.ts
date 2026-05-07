@@ -71,10 +71,11 @@ function setupDiscordRpc() {
     updatePresence();
   });
 
-  rpcClient.login({ clientId: DISCORD_CLIENT_ID }).catch((error) => {
+  rpcClient.login({ clientId: DISCORD_CLIENT_ID }).catch((error: unknown) => {
     console.error('Discord RPC login failed:', error);
     if (mainWindow) {
-      mainWindow.webContents.send('rpc-error', error.message || 'Discord RPC login failed');
+      const message = error instanceof Error ? error.message : 'Discord RPC login failed';
+      mainWindow.webContents.send('rpc-error', message);
     }
   });
 }

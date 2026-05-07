@@ -1,21 +1,3 @@
-interface MediaTrack {
-  title: string;
-  artist: string;
-  album: string;
-  artworkUrl: string;
-  state: 'playing' | 'paused' | 'stopped';
-}
-
-declare global {
-  interface Window {
-    electron: {
-      openMusicApp: () => Promise<void>;
-      getCurrentTrack: () => Promise<MediaTrack | null>;
-      onTrackUpdate: (callback: (track: MediaTrack) => void) => void;
-      onRpcError: (callback: (message: string) => void) => void;
-    };
-  }
-}
 
 const titleEl = document.getElementById('track-title') as HTMLElement;
 const artistEl = document.getElementById('track-artist') as HTMLElement;
