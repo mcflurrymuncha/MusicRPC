@@ -1,0 +1,22 @@
+{
+  "name": "musicrpc",
+  "version": "0.1.0",
+  "description": "MusicRPC is an Electron app that updates Discord Rich Presence from Windows media sessions.",
+  "main": "dist/main.js",
+  "author": "",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "start": "npm run build && electron .",
+    "dev": "npm run build && electron ."
+  },
+  "dependencies": {
+    "discord-rpc": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/electron": "^25.2.0",
+    "@types/node": "^20.14.2",
+    "electron": "^29.6.1",
+    "typescript": "^5.5.4"
+  }
+}

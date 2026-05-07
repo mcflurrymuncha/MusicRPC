@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MusicRPC</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header>
+        <h1>MusicRPC</h1>
+      </header>
+      <main>
+        <section class="track-card">
+          <img id="track-artwork" alt="Artwork" />
+          <div class="track-info">
+            <h2 id="track-title">Loading...</h2>
+            <p><strong>Artist:</strong> <span id="track-artist">-</span></p>
+            <p><strong>Album:</strong> <span id="track-album">-</span></p>
+            <p><strong>Status:</strong> <span id="track-state">Starting...</span></p>
+          </div>
+        </section>
+        <section class="actions">
+          <button id="open-music">Open Music App</button>
+          <p id="status-message">The app will update Discord when playback is detected.</p>
+        </section>
+      </main>
+    </div>
+    <script src="renderer.js"></script>
+  </body>
+</html>
