@@ -14,9 +14,9 @@
     "discord-rpc": "^4.0.0"
   },
   "devDependencies": {
-    "@types/electron": "^25.2.0",
+    "@types/electron": "^42.0.0",
     "@types/node": "^20.14.2",
-    "electron": "^29.6.1",
+    "electron": "^42.0.0",
     "typescript": "^5.5.4"
   }
 }
