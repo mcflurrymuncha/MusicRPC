@@ -8,7 +8,8 @@
   "scripts": {
     "build": "tsc",
     "start": "npm run build && electron .",
-    "dev": "npm run build && electron ."
+    "dev": "npm run build && electron .",
+    "package": "npm run build && electron-builder --win nsis --x64"
   },
   "dependencies": {
     "discord-rpc": "^4.0.0"
@@ -17,6 +18,29 @@
     "@types/discord-rpc": "^4.0.0",
     "@types/node": "^20.14.2",
     "electron": "^42.0.0",
+    "electron-builder": "^24.8.0",
     "typescript": "^5.5.4"
+  },
+  "build": {
+    "appId": "com.mcflurrymuncha.musicrpc",
+    "productName": "MusicRPC",
+    "files": [
+      "dist/**/*",
+      "package.json",
+      "README.md"
+    ],
+    "directories": {
+      "output": "release"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowElevation": true,
+      "allowToChangeInstallationDirectory": true
+    },
+    "win": {
+      "target": ["nsis"],
+      "artifactName": "MusicRPC Setup ${version}.exe"
+    }
   }
 }
